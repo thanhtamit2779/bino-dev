@@ -3,8 +3,10 @@ import { hot } from 'react-hot-loader';
 
 import './../assets/plugins/bootstrap/dist/css/bootstrap.min.css';
 import './../assets/plugins/font-awesome/css/font-awesome.min.css';
+import './../../node_modules/react-responsive-carousel/lib/styles/carousel.min.css';
+import './../assets/scss/styles.scss';
 
-import { Header, Footer } from './../app/components/Include';
+import { Header, Footer, Content } from './../app/components/Include';
 
 class App extends React.Component {
   render() {
@@ -15,7 +17,8 @@ class App extends React.Component {
           <Header/>
 
           {/* CONTENT */}
-      
+          <Content/>
+
           {/* FOOTER */}
           <Footer/>
       </React.Fragment>
