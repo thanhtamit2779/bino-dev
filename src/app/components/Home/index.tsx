@@ -1,0 +1,29 @@
+import * as React from 'react';
+import Slider from './../Include/Slider';
+import Introduce from './Introduce';
+import About from './About';
+import Services from './Services';
+import Work from './Work';
+import CaseStudy from './CaseStudy';
+import OutStat from './OutStat';
+
+export default class Index extends React.Component<any, any> {
+    constructor(props:any) {
+        super(props);
+    }
+
+    render() {
+        return (
+            <React.Fragment>
+                <Slider/>
+                <Introduce/>
+                <About/>
+                <Services/>
+                <Work/>
+                <CaseStudy/>
+                <OutStat/>
+            </React.Fragment>
+        );
+    }
+}
+
