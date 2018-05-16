@@ -1,15 +1,11 @@
 import * as React from 'react';
 
-import {
-    Container,
-    Navbar,
-    NavbarBrand,
-    Nav,
-    NavItem,
-    NavLink
-} from 'reactstrap';
+import {Container} from 'reactstrap';
 
-class Navigation extends React.Component<any, any> {
+import {NavLink} from 'react-router-dom';
+
+class Navigation extends React.Component < any,
+any > {
 
     constructor(props : any) {
         super(props);
@@ -18,34 +14,35 @@ class Navigation extends React.Component<any, any> {
     render() {
         return (
             <React.Fragment>
-                <Container>
-                    <Navbar color="light" light expand="md">
-                        <NavbarBrand href="/" className="logo pull-left">B<span>INO</span></NavbarBrand>
-                        <Nav navbar className="pull-right">
-                            <NavItem>
-                                <NavLink href="/">Home</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/about-us">About us</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/portfolio">Portfolio</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/pricing">Pricing</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/team">Team</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/blog">Blog</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/contact">Contact</NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Navbar>
-                </Container>
+                <nav className="menu desktop">
+                    <Container>
+                        <a href="/" className="logo pull-left"><img src={ require('./../../../assets/images/logo.png') } title="BINO"/>
+                        </a>
+                        <ul className="pull-right">
+                            <li className="active">
+                                <NavLink to="/">Home</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/about-us">About us</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/portfolio">Portfolio</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/pricing">Pricing</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/team">Team</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/blog">Blog</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/contact">Contact</NavLink>
+                            </li>
+                        </ul>
+                    </Container>
+                </nav>
             </React.Fragment>
         );
     }

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Navigation from './Navigation';
-import Slider from './Slider';
 
 class Header extends React.Component<any, any> {
     constructor(props:any) {
@@ -12,8 +11,7 @@ class Header extends React.Component<any, any> {
     render() {
         return (
             <header className="header">
-                <Navigation/>  
-                <Slider/>  
+                <Navigation/>
             </header>
         );
     }
