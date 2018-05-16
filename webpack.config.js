@@ -41,6 +41,21 @@ module.exports = {
           ? 'ts-loader'
           : ['babel-loader?plugins=react-hot-loader/babel', 'ts-loader']
       },
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader"
+      }, {
+          loader: "css-loader", options: {
+              sourceMap: true
+          }
+      }, {
+          loader: "sass-loader", options: {
+              sourceMap: true
+          }
+      }]
+      },
+
       // css
       {
         test: /\.css$/,
@@ -141,10 +156,14 @@ module.exports = {
     contentBase: sourcePath,
     hot: true,
     inline: true,
-    historyApiFallback: {
-      disableDotRule: true
-    },
-    stats: 'minimal'
+    // historyApiFallback: {
+    //   disableDotRule: true
+    // },
+    stats: 'minimal',
+
+    historyApiFallback: true,
+    // hot: true,
+    // inline: true
   },
   node: {
     // workaround for webpack-dev-server issue
