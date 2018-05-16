@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext,vietnamese');
+
+$colorDefault   : #000;
+$bgDefault      : #000;
+$borderDefault  : 1px solid #000;
+
+// Mixin itself
+@mixin clearfix() {
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+  
+// Usage as a mixin
+.clearfix {
+    @include clearfix;
+}
+
+.header {
+    height: auto;
+    width: 100%;
+}
+
+.menu {
+    max-height: 55px;
+    position: fixed;
+    left: 0;
+    top: 40px;
+    right: 0;
+    z-index: 1;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            float: left;
+            padding: 0px 31px;
+
+            a {
+                color: #fff;
+                display: block;
+                text-transform: uppercase;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 14pt;
+                padding: 12px 0px;
+                text-align: right;
+
+                &:hover {
+                    text-decoration: none;
+                    color: #e74c3c;
+                    border-bottom: 1px solid #e74c3c;
+                }
+            } 
+
+            a.active {
+                color: #e74c3c;
+                border-bottom: 1px solid #e74c3c;
+            }
+        }
+    }   
+}
+
+.sliders {  
+    height: auto;
+    max-width: 100%;
+    float: none;
+    clear: both;
+
+    .carousel.carousel-slider .control-arrow {
+        top: 45%;
+        bottom:unset;
+    }
+     
+    .carousel .control-prev.control-arrow:before {
+        content: "\f104";
+        border-right: none !important;
+    }
+    
+    .carousel .control-next.control-arrow:before {
+        content: "\f105";
+        border-left: none !important;
+    }
+    
+    .carousel .control-arrow:before, .carousel.carousel-slider .control-arrow:before {
+        border-top: none !important;
+        border-bottom: none !important;
+        font-family: 'FontAwesome';
+        width: 45px;
+        height: 45px;
+        background: #706963;
+        color: #3c3530;
+        line-height: 45px;
+    }
+    
+    .carousel .control-next.control-arrow:hover, 
+    .carousel.carousel-slider .control-arrow:hover{
+        background: none;
+        color: #fff; 
+    }
+    
+    .carousel.carousel-slider .control-arrow:hover::before {
+        background: #e74c3c;
+        color: #fff; 
+    }
+
+    .item {
+
+        background-attachment: scroll;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        position: relative;
+        
+        img {
+            width: auto;
+            height: 100%;
+            display: none;
+        }
+
+        .heading-small {
+            font-size: 24pt;
+        }
+    
+        .heading-big {
+            font-size: 72pt;
+        }
+    
+        .line {
+            width: 7px;
+            height: 7px;
+            background: #e74c3c;
+            color: #e74c3c;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+    
+            &::before,
+            &::after {
+                content: '';
+                width: 80px;
+                min-height: 1px;
+                background-color: #fff;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+            }
+    
+            &::before {
+                margin-left: 15px;
+                position: absolute;
+                top: 3.5px;
+            }
+    
+            &::after {
+                margin-left: -95px;
+                position: absolute;
+                top: 3.5px;
+            }
+    
+        }
+    
+        .description {
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 50px 23% 65px 23%;
+        }
+    
+        .content {
+            color: #fff;
+        }
+    
+        a.get-start, a.learn-more {
+            color: #fff;
+            font-size: 14pt;
+            text-align: center;
+            width: 225px;
+            padding:13px 0px;
+        }
+    
+        a.get-start {
+            background: #e74c3c;
+            margin-right: 30px;
+        }
+    
+        a.learn-more {
+            border: 1px solid #fff;
+            background: transparent;
+        }
+    } 
+
+    .carousel .slide {
+        background: transparent;
+    }
+
+    .carousel .slider {
+        height: 100vh;
+    }
+}
