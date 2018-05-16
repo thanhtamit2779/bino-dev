@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext,vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=vietnamese');
 
-$colorDefault   : #000;
-$bgDefault      : #000;
-$borderDefault  : 1px solid #000;
+$colorDefault        : #e74c3c;
+$bgDefault           : #e74c3c;
+$borderColorDefault  : #e5e5e5;
+$fontSizeDefautl     : 14pt;
 
 // Mixin itself
 @mixin clearfix() {
@@ -18,11 +20,75 @@ $borderDefault  : 1px solid #000;
     @include clearfix;
 }
 
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 .header {
     height: auto;
     width: 100%;
 }
 
+.btn-default {
+    color: #fff;
+    font-size: 14pt;
+    text-align: center;
+    width: 225px;
+    padding:13px 0px;
+    background: $bgDefault;
+}
+
+.btn-default:hover {
+    color: #fff;
+}
+
+.common-line {
+    width: 7px;
+    height: 7px;
+    background: $bgDefault;
+    color: $colorDefault;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    margin-bottom: 70px;
+    margin-top: 35px;
+
+    &::before,
+    &::after {
+        content: '';
+        width: 80px;
+        min-height: 1px;
+        background-color: #999999;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+    }
+
+    &::before {
+        margin-left: 15px;
+        position: absolute;
+        top: 3.5px;
+    }
+
+    &::after {
+        margin-left: -95px;
+        position: absolute;
+        top: 3.5px;
+    }
+}
+
+strong.common-title {
+    font-size: 36pt;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #6a6a6a;
+    text-align: center;
+    display: block;
+}
+
+
+/* MENU */
 .menu {
     max-height: 55px;
     position: fixed;
@@ -64,6 +130,7 @@ $borderDefault  : 1px solid #000;
     }   
 }
 
+/* SLIDER */
 .sliders {  
     height: auto;
     max-width: 100%;
@@ -103,7 +170,7 @@ $borderDefault  : 1px solid #000;
     }
     
     .carousel.carousel-slider .control-arrow:hover::before {
-        background: #e74c3c;
+        background: $bgDefault;
         color: #fff; 
     }
 
@@ -135,23 +202,10 @@ $borderDefault  : 1px solid #000;
         }
     
         .line {
-            width: 7px;
-            height: 7px;
-            background: #e74c3c;
-            color: #e74c3c;
-            border-radius: 50%;
-            margin: 0 auto;
-            position: relative;
     
             &::before,
             &::after {
-                content: '';
-                width: 80px;
-                min-height: 1px;
                 background-color: #fff;
-                display: inline-block;
-                position: relative;
-                vertical-align: middle;
             }
     
             &::before {
@@ -174,6 +228,8 @@ $borderDefault  : 1px solid #000;
             overflow: hidden;
             text-overflow: ellipsis;
             padding: 50px 23% 65px 23%;
+            line-height: 24pt;
+            font-size: $fontSizeDefautl;
         }
     
         .content {
@@ -189,7 +245,7 @@ $borderDefault  : 1px solid #000;
         }
     
         a.get-start {
-            background: #e74c3c;
+            background: $bgDefault;
             margin-right: 30px;
         }
     
@@ -205,5 +261,328 @@ $borderDefault  : 1px solid #000;
 
     .carousel .slider {
         height: 100vh;
+    }
+}
+
+/* INTRODUCE */
+.introduce {
+
+    width: 100%;
+    height: auto;
+    padding: 115px 0px;
+    background: #fff;
+    border-bottom: 1px solid $borderColorDefault;
+
+    .item {
+        text-align: center;
+
+        .image {
+            width: 72px;
+            height: 72px;
+            text-align: center;
+            border:1px solid $borderColorDefault;
+            line-height: 72px;
+            margin: 0px auto;
+        }
+    }
+
+    .item.first .image {
+        border: 1px solid $colorDefault;
+        -ms-transform: rotate(45deg); /* IE 9 */
+        -webkit-transform: rotate(45deg); /* Safari 3-8 */
+        transform: rotate(45deg);
+
+        img {
+            transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+    }
+
+    .title {
+        display: block;
+        font-size:18pt; 
+        color: $colorDefault;
+        font-weight: unset;
+        padding: 30px 0px;
+    }
+
+    .line {
+        display: block;
+        width: 42px;
+        height: 1px;
+        border-bottom: 1px solid $borderColorDefault;
+        margin: 0 auto;
+    }
+
+    .description {
+        margin-top: 18px;
+        font-size: 12pt;
+        line-height: 20pt;
+    }
+}
+
+/* ABOUT */
+.about {
+    width: 100%;
+    height: 100%;
+    padding: 135px 0px;   
+    
+    .title {
+        font-size:36pt;
+        font-weight: bold;
+        border-left: 5px solid $colorDefault;
+        max-height: 35px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #6a6a6a;
+        padding-left: 32px;
+    }
+
+    .description {
+        line-height: 20pt;
+        font-size: $fontSizeDefautl;
+
+        p {
+            font-family: 'Source Sans Pro', sans-serif;
+            color:#999999
+        }
+    }
+}
+
+/* SERVER */
+.services {
+
+    .item {
+        overflow: hidden;
+        display: flex;
+        display: -webkit-flex;
+        align-items: stretch;
+    }
+
+    .text {
+        width: 50%;
+        background: #202020;
+        padding: 145px 0;
+
+        > .title {
+            display: block;
+            text-align: right;
+            color: #fff;
+            font-size:36pt;
+            font-weight: bold;
+            border-right: 5px solid $colorDefault;
+            font-family: 'Source Sans Pro', sans-serif;
+            padding-right: 32px;
+            margin-right: 80px;
+        }
+
+        ul {
+            list-style-type: none;
+            text-align: right;
+            margin-top: 65px;
+            padding-right: 80px;
+
+            li {
+                position: relative;
+                max-height: 75px;
+                margin-bottom: 70px;
+            }
+
+            .title {
+                font-size: 18pt;
+                color: $colorDefault;
+                font-weight: unset;
+                line-height: 29pt;
+            }
+
+            .description {
+                color:#999999
+            }
+
+            .icon {
+                float: right;
+                width: 62px;
+                height: 62px;
+                background: #fff;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 31px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 10px;
+                right: -110px;
+
+                img {
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .image {
+        width: 50%;
+    }
+
+    .control-dots {
+        height: 100%;
+        top: 45%;
+        bottom: 0;
+        left:0;
+        padding-left: 15px;
+
+        .dot {
+            width: 1px;
+            height: 35px;
+            background: $borderColorDefault;
+            display: block;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 10px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .dot.selected {
+            background: $bgDefault;
+        }
+    }
+}
+
+/* WORKS */
+.works {
+    padding-top: 140px;
+    width: 100%;
+    height: 100%;
+
+    ul.nav-tabs {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        border: none;
+
+        li a {
+            color: #999999;
+        }
+
+        li a:hover {
+            border: none;
+            cursor: pointer;
+            color: $colorDefault
+        }
+    }
+
+    .list {
+        .item {
+            width: 25%;
+            float: left;
+            border: none;
+            box-sizing: border-box;
+            border-radius: 0;
+
+            img {
+                border: none;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+/* CASE STUDY */
+.case-study {
+    background:#f4f5f9;
+    width: 100%;
+    height: auto;
+    padding: 145px 0px;
+    display: block;
+
+    .content-bottom {
+        img { width: auto;     max-width: 100%;
+            height: auto;}
+        position: relative;
+
+        .text {
+            background: #fff;
+            width: 52%;
+            position: absolute;
+            top: 5%;
+        }
+
+        .image {
+            width: 50%;
+        }
+
+        .item {
+            text-align: center;
+    
+            .image {
+                border: 1px solid $colorDefault;
+                background: $bgDefault;
+                -ms-transform: rotate(45deg); /* IE 9 */
+                -webkit-transform: rotate(45deg); /* Safari 3-8 */
+                transform: rotate(45deg);
+
+                width: 72px;
+                height: 72px;
+                text-align: center;
+                line-height: 72px;
+                margin: 0px auto;
+        
+                display: flex;
+                display: -webkit-flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 55px;
+
+                img {
+                    transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                }
+            }
+
+            .line {
+                display: block;
+                width: 42px;
+                height: 1px;
+                border-bottom: 1px solid $borderColorDefault;
+                margin: 30px auto;
+            }
+
+            .description {
+                color:#999999;
+                line-height: 24pt;
+                margin-bottom: 40px;
+                padding: 0 60px;
+            }
+        }
+    }
+
+    .carousel .slide {
+        background: #fff;
+        padding: 80px 0 67px;
+    }
+
+    .carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover {
+        background: $bgDefault;
+    }
+}
+
+/* OutStat */
+.out-stat {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: url('./../images/out-stats.png') no-repeat #7f7f7f;
+    opacity: .5;
+    height: 510px;
+
+    .nav {
+        display: flex;
+        
     }
 }

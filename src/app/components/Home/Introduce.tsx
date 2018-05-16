@@ -13,7 +13,7 @@ class Introduce extends React.Component<any,any> {
                 <Container>
                     <Row>
                         <Col xs="6" sm="3">
-                            <div className="item">
+                            <div className="item first">
                                 <div className="image">
                                     <img
                                         src={require('./../../../assets/images/eye.png')}

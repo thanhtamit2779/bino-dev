@@ -61,7 +61,7 @@ class Slider extends React.Component<any, any> {
                     <div className="content">
                         <p className="heading-small text-center">{ item.headingSmall }</p>
                         <p className="heading-big text-center">{ item.headingBig }</p>
-                        <div className="text-center line"></div>
+                        <div className="text-center common-line line"></div>
                         <div className="description text-center">
                             <p>{  item.description }</p>
                         </div>

@@ -40,11 +40,11 @@ any > {
         return (
             <section className="works clearfix">
                 <div className="text">
-                    <strong className="title">RECENT WORKS</strong>
-                    <p className="descirption text-center">It has survived not only five centuries,
+                    <strong className="title common-title">RECENT WORKS</strong>
+                    <p className="description text-center common-description">It has survived not only five centuries,
                         but also the leap scrambled it to make a type.</p>
-                    <span className="line"></span>
-                    <Nav tabs>
+                    <span className="common-line"></span>
+                    <Nav tabs className="">
                         <NavItem>
                             <NavLink
                                 onClick={() => {
@@ -87,7 +87,7 @@ any > {
                         </NavItem>
                     </Nav>
                 </div>
-                <div className="works">
+                <div className="list">
                     <TabContent activeTab={this.state.activeTab}>
                         <TabPane tabId="1">
                                 <Card className="item">
@@ -106,7 +106,55 @@ any > {
                                     <CardImg
                                         top
                                         width="100%"
-                                        src={ require('./../../../assets/images/portfolio.png') }
+                                        src={ require('./../../../assets/images/portfolio-2.png') }
+                                        alt="portfolio"/>
+                                    <CardBody className="d-none">
+                                        <span className="line"></span>
+                                        <p className="title">T-SHIRT DESIGN</p>
+                                        <span>art / t-shirt</span>
+                                    </CardBody>
+                                </Card>
+                                <Card className="item">
+                                    <CardImg
+                                        top
+                                        width="100%"
+                                        src={ require('./../../../assets/images/portfolio-3.png') }
+                                        alt="portfolio"/>
+                                    <CardBody className="d-none">
+                                        <span className="line"></span>
+                                        <p className="title">T-SHIRT DESIGN</p>
+                                        <span>art / t-shirt</span>
+                                    </CardBody>
+                                </Card>
+                                <Card className="item">
+                                    <CardImg
+                                        top
+                                        width="100%"
+                                        src={ require('./../../../assets/images/portfolio-4.png') }
+                                        alt="portfolio"/>
+                                    <CardBody className="d-none">
+                                        <span className="line"></span>
+                                        <p className="title">T-SHIRT DESIGN</p>
+                                        <span>art / t-shirt</span>
+                                    </CardBody>
+                                </Card>
+                                <Card className="item">
+                                    <CardImg
+                                        top
+                                        width="100%"
+                                        src={ require('./../../../assets/images/portfolio-5.png') }
+                                        alt="portfolio"/>
+                                    <CardBody className="d-none">
+                                        <span className="line"></span>
+                                        <p className="title">T-SHIRT DESIGN</p>
+                                        <span>art / t-shirt</span>
+                                    </CardBody>
+                                </Card>
+                                <Card className="item">
+                                    <CardImg
+                                        top
+                                        width="100%"
+                                        src={ require('./../../../assets/images/portfolio-6.png') }
                                         alt="portfolio"/>
                                     <CardBody className="d-none">
                                         <span className="line"></span>
@@ -130,55 +178,7 @@ any > {
                                     <CardImg
                                         top
                                         width="100%"
-                                        src={ require('./../../../assets/images/portfolio.png') }
-                                        alt="portfolio"/>
-                                    <CardBody className="d-none">
-                                        <span className="line"></span>
-                                        <p className="title">T-SHIRT DESIGN</p>
-                                        <span>art / t-shirt</span>
-                                    </CardBody>
-                                </Card>
-                                <Card className="item">
-                                    <CardImg
-                                        top
-                                        width="100%"
-                                        src={ require('./../../../assets/images/portfolio.png') }
-                                        alt="portfolio"/>
-                                    <CardBody className="d-none">
-                                        <span className="line"></span>
-                                        <p className="title">T-SHIRT DESIGN</p>
-                                        <span>art / t-shirt</span>
-                                    </CardBody>
-                                </Card>
-                                <Card className="item">
-                                    <CardImg
-                                        top
-                                        width="100%"
-                                        src={ require('./../../../assets/images/portfolio.png') }
-                                        alt="portfolio"/>
-                                    <CardBody className="d-none">
-                                        <span className="line"></span>
-                                        <p className="title">T-SHIRT DESIGN</p>
-                                        <span>art / t-shirt</span>
-                                    </CardBody>
-                                </Card>
-                                <Card className="item">
-                                    <CardImg
-                                        top
-                                        width="100%"
-                                        src={ require('./../../../assets/images/portfolio.png') }
-                                        alt="portfolio"/>
-                                    <CardBody className="d-none">
-                                        <span className="line"></span>
-                                        <p className="title">T-SHIRT DESIGN</p>
-                                        <span>art / t-shirt</span>
-                                    </CardBody>
-                                </Card>
-                                <Card className="item">
-                                    <CardImg
-                                        top
-                                        width="100%"
-                                        src={ require('./../../../assets/images/portfolio.png') }
+                                        src={ require('./../../../assets/images/portfolio-7.png') }
                                         alt="portfolio"/>
                                     <CardBody className="d-none">
                                         <span className="line"></span>

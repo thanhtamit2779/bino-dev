@@ -13,7 +13,7 @@ any > {
         return (
             <section className="out-stat clearfix">
                 <Container>
-                    <Nav navbar className="pull-right">
+                    <Nav>
                         <NavItem className="item">
                             <NavLink href="/"><img className="img-responsive" src={ require('./../../../assets/images/stat-heart.png') }/></NavLink>
                             <span className="count">3891</span>
