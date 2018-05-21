@@ -707,3 +707,54 @@ strong.common-title {
         }
     }
 }
+
+/* Out Team */
+.our-team {
+    background: url('./../images/our-team.png') no-repeat;
+    height: 747px;
+    background-size: contain;
+
+    .title {
+        color: #fff !important;
+        padding-top: 125px;
+    }
+
+    .description {
+        color: #f4f5f9 !important;
+    }
+
+    .user {
+        width: 100%;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        .item {
+            border: 5px solid $bgDefault;
+            border-radius: 50%;
+        }
+
+        .item:nth-child(1) {
+
+        }
+
+        .item:nth-child(2) {
+            margin-top: -125px;
+        }
+
+        .item:nth-child(3) {
+            margin-top: -135px;
+        }
+
+        .item:nth-child(4) {
+            margin-top: -105px;
+        }
+
+        .item:nth-child(5) {
+            margin-top: -325px;
+        }
+    }
+}
