@@ -6,6 +6,8 @@ import Services from './Services';
 import Work from './Work';
 import CaseStudy from './CaseStudy';
 import OutStat from './OutStat';
+import OurPricing from './OurPricing';
+import OurTeam from './OurTeam';
 
 export default class Index extends React.Component<any, any> {
     constructor(props:any) {
@@ -22,6 +24,8 @@ export default class Index extends React.Component<any, any> {
                 <Work/>
                 <CaseStudy/>
                 <OutStat/>
+                <OurPricing/>
+                <OurTeam/>
             </React.Fragment>
         );
     }
