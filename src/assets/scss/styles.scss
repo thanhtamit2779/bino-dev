@@ -581,8 +581,41 @@ strong.common-title {
     opacity: .5;
     height: 510px;
 
-    .nav {
+    .container {
+        height: 100%;
+    }
+
+    ul {
+        height: 100%;
         display: flex;
-        
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-between;
+
+        li.item {
+            a {
+                width: 110px;
+                height: 110px;
+                line-height: 90px;
+                text-align: center;
+                border: 1px solid $borderColorDefault;
+                border-radius: 50%;
+                margin-bottom: 45px;
+            }
+
+            .count {
+                font-weight: 700;
+                color: #f4f5f9;
+                display: block;
+                text-align: center
+            }
+
+            .title {
+                color: #f4f5f9;
+                display: block;
+                text-align: center
+            }
+        }
     }
 }
