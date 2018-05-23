@@ -8,7 +8,7 @@ import {
 
 import { Carousel } from 'react-responsive-carousel';
 
-class Work extends React.Component < any, any > {
+class CaseStudy extends React.Component < any, any > {
 
     constructor(props : any) {
         super(props);
@@ -90,4 +90,4 @@ class Work extends React.Component < any, any > {
     }
 }
 
-export default Work;
+export default CaseStudy;
