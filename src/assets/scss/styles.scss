@@ -708,7 +708,7 @@ strong.common-title {
     }
 }
 
-/* Out Team */
+/* Our Team */
 .our-team {
     background: url('./../images/our-team.png') no-repeat;
     height: 747px;
@@ -755,6 +755,117 @@ strong.common-title {
 
         .item:nth-child(5) {
             margin-top: -325px;
+        }
+    }
+}
+
+/* Our Blog */
+.our-blog {
+    background:#f4f5f9;
+
+    .list {
+        .item {
+            width: 25%;
+            float: left;
+            position: relative;
+    
+            > a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+
+            &:hover .caption {
+                display: block !important;
+                cursor: pointer;
+            }
+
+            .caption {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right:0;
+                bottom: 0;
+                background: $bgDefault;
+                color: #fff;
+                padding: 70px 50px;
+            }
+
+            .title, .category {
+                display: block;
+            }
+
+            .title {
+                font-size: 24pt;
+                font-weight: 700;
+            }
+
+            .description {
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-align: justify;
+            }
+
+            .line {
+                display: block;
+                width: 45px;
+                height: 4px;
+                background: #fff;
+            }
+
+            .readmore {
+                text-transform: capitalize;
+                color: #fff;
+            }
+        } 
+
+        .item.active .caption {
+            display: block !important;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right:0;
+            bottom: 0;
+            background: $bgDefault;
+            color: #fff;
+            padding: 70px 50px;
+        }
+
+        .item::before {
+            display: none;
+        }     
+
+        .item.even:hover::before, .item.even.active::before {
+            display: inline-block;
+            position: absolute;
+            left: -25px;
+            top: 45%;
+            width:0px;
+            height:0px;
+            content: '';
+            border-bottom:25px solid transparent;
+            border-top:25px solid transparent;
+            border-right:25px solid $bgDefault; /* Tam giác trái được đổ màu */
+            z-index: 999;
+        }
+
+        .item.odd:hover::before, .item.odd.active::before {
+            display: inline-block;
+            position: absolute;
+            right: -25px;
+            top: 45%;
+            width:0px;
+            height:0px;
+            content: '';
+            border-bottom:25px solid transparent;
+            border-top:25px solid transparent;
+            border-left:25px solid $bgDefault; /* Tam giác phải được đổ màu */
+            z-index: 99;
         }
     }
 }
