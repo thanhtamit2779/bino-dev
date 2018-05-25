@@ -870,3 +870,59 @@ strong.common-title {
         }
     }
 }
+
+/* Contact */
+.contact {
+    background:#f4f5f9;
+    padding: 145px 0px;
+
+    .line {
+        label {
+            font-size: 24pt;
+            color: $colorDefault
+        }
+
+        p {
+            color: #999;
+        }
+    }
+
+    .line:last-child {
+        padding-bottom: 0;
+    }
+
+    .content {
+        .left, .right {
+            background: #fff;
+            padding: 90px;
+        }     
+    }
+
+    input, textarea {
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid $borderColorDefault;
+        font-size: 14pt;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    button {
+        margin-top: 10px;
+        background: $bgDefault;
+        color: #fff;
+        border-color: $bgDefault;
+    }
+}
+
+
+/* PROMO */
+.promo {
+
+    button {
+        display: block;
+        margin: 0 auto;
+    }
+}
